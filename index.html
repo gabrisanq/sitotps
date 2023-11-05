@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Santarsiero</title>
+
+    <script>
+        function stampa(){
+        
+            var print = document.getElementById("nome").value;
+            document.getElementById("name").innerHTML=print;
+
+            var print= document.getElementById("cognome").value;
+            document.getElementById("surname").innerHTML=print;
+
+            var print = document.getElementById("anno").value;
+            document.getElementById("year").innerHTML=print;
+
+            var print = document.getElementById("indirizzo").value;
+            document.getElementById("address").innerHTML=print;
+
+            var print = document.getElementById("mail").value;
+            document.getElementById("email").innerHTML=print;
+
+            var sesso = document.getElementById("maschio");
+            document.getElementById("sesso").innerHTML = (sesso ? "Maschio" : "Femmina");
+        }
+
+        function bottone(){
+            var ita = document.getElementById("italiano");
+            var st = document.getElementById("storia");
+            var mat = document.getElementById("matematica");
+            var info = document.getElementById("informatica");
+
+            if(ita.checked){
+                document.getElementById("text").innerHTML="italiano";
+            }else{
+                document.getElementById("text").innerHTML="";
+            }
+
+            if(st.checked){
+                document.getElementById("text1").innerHTML="storia";
+            }else{
+                document.getElementById("text1").innerHTML="";
+            }
+
+            if(mat.checked){
+                document.getElementById("text2").innerHTML="matematica";
+            }else{
+                document.getElementById("text2").innerHTML="";
+            }
+
+            if(info.checked){
+                document.getElementById("text3").innerHTML="informatica";
+            }else{
+                document.getElementById("text3").innerHTML="";
+            }
+
+       }
+
+    </script>
+
+
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #c5ebe9;
+    }
+    .{
+        display: block;
+    }
+    .sec1{
+        display: inline-block;
+        padding-right: 10px;
+
+    }
+    .sec{
+        padding-bottom: 10px;
+    }
+
+    form{
+        background-color: #ffff;
+        width: 500px;
+        border: 1px solid black;
+        padding-left: 100px;
+
+        margin: auto;
+    } label{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+
+    #invia{
+        background-color: rgb(158, 202, 240);
+        width: 80px;
+        border-radius: 4px;
+        color: #ffff;
+
+    }
+    
+</style>
+<body>
+   
+
+        
+    <h1 style="text-align: center;">Tabella Dati anagrafici</h1>
+
+    <form>
+        <div class="sec1">
+        <div class="sec">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" class="" value="Es: Luca"/>
+        </div>
+    
+
+
+        <div class="sec">
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" class="" value="Es: Serra"/>
+        </div>
+    </div>
+
+    <div class="sec1">
+        <div class="sec">
+            <label for="indirizzo">Indirizzo:</label>
+            <input type="text" id="indirizzo" class="" value="Es: Via salvo d'acquisto..."/>
+        </div>
+
+        <div class="sec">
+            <label for="city">Città:</label>
+            <input type="text" id="citta" class="" value="Es: Novara"/>
+        </div>
+    </div>
+
+
+
+
+    </div>
+    <div class="sec1">
+        <div class="sec">
+
+            <label for = "myCheck">italiano:</label>
+            <input type="checkbox" id="italiano">
+            <label for = "myCheck">storia:</label>
+            <input type="checkbox" id="storia">
+            <br>
+            <br>
+            <label for = "myCheck">matematica:</label>
+            <input type="checkbox" id="matematica">
+            <label for = "myCheck">informatica:</label>
+            <input type="checkbox" id="informatica">
+            
+        </div>
+
+
+        <input type="radio" name="sesso" id="maschio" value="maschio" checked> M
+        <input type="radio" name="sesso" id="femmina" value="femmina"> F 
+
+
+
+        <div class="sec">
+
+            
+    </div>
+
+    
+
+
+    </form>
+
+    <input type="button" value = "cliccami" onclick="stampa(), bottone()">
+    <p id = "name"></p>
+    <p id = "surname"></p>
+    <p id = "year"></p>
+    <p id = "address"></p>
+    <p id = "email"></p>
+    <p id = "sesso"></p>
+    <p id="text"></p>
+    <p id="text1"></p>
+    <p id="text2"></p>
+    <p id="text3"></p>
+    
+</body>
+</html>
